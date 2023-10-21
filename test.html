@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Multiple Divs with JavaScript</title>
+</head>
+<body>
+    <button onclick="createDivs()">Create Divs</button>
+    <div id="container"></div>
+
+    <script>
+        function createDivs() {
+            // Get a reference to the container div
+            var container = document.getElementById("container");
+
+            // Number of divs you want to create
+            var numDivs = 5;
+
+            // Loop to create and append the divs to the container
+            for (var i = 1; i <= numDivs; i++) {
+                // Create a new div element
+                var div = document.createElement("div");
+                
+                // Set some attributes or styles for the div (optional)
+                div.textContent = "Div " + i;
+                div.style.backgroundColor = "lightblue";
+                div.style.padding = "10px";
+                div.style.margin = "5px";
+                
+                // Append the div to the container
+                container.appendChild(div);
+            }
+        }
+    </script>
+</body>
+</html>
